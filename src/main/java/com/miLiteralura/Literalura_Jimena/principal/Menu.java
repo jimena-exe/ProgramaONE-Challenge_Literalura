@@ -4,11 +4,14 @@ import com.miLiteralura.Literalura_Jimena.model.Libro;
 import com.miLiteralura.Literalura_Jimena.serviceAPI.ConsumoApi;
 import com.miLiteralura.Literalura_Jimena.serviceAPI.ConvierteDatos;
 
+import java.util.Scanner;
+
 public class Menu {
     //variables
-    //public String url = "https://gutendex.com/books";
+    public final String URL_BASE = "https://gutendex.com/books/";
     public ConsumoApi consumoApi = new ConsumoApi();
     public ConvierteDatos convierteDatos = new ConvierteDatos();
+    private Scanner teclado = new Scanner(System.in);
 
 
     //médoto
@@ -25,9 +28,9 @@ public class Menu {
 //                """);
 
 //        Libro libros = consumoApi.obtenerDatos(url);
-        var json = consumoApi.obtenerDatos("https://gutendex.com/books");
-//        var datos = convierteDatos.obtenerDatos(json, Libro.class);
-        System.out.println(json);
+        var json = consumoApi.obtenerDatos(URL_BASE);
+        var datos = convierteDatos.obtenerDatos(json, Libro.class);
+        System.out.println(datos);
 
     }
 }
