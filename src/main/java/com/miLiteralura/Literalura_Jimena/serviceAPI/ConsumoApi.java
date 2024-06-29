@@ -1,7 +1,5 @@
 package com.miLiteralura.Literalura_Jimena.serviceAPI;
 
-import com.miLiteralura.Literalura_Jimena.model.Libro;
-
 import java.io.IOException;
 import java.net.URI;
 import java.net.http.HttpClient;

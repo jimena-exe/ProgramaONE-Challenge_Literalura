@@ -15,6 +15,7 @@ public class LiteraluraJimenaApplication implements CommandLineRunner{
 	@Override
 	public void run(String... args) throws Exception {
 
+		System.out.println("\nBienvenido/a a la biblioteca de Alejandría.");
 		Menu menu = new Menu();
 		menu.mostrarElMenu();
 

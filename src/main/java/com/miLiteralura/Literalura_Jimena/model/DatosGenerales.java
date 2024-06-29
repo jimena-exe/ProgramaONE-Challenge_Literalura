@@ -3,12 +3,9 @@ package com.miLiteralura.Literalura_Jimena.model;
 import com.fasterxml.jackson.annotation.JsonAlias;
 import com.fasterxml.jackson.annotation.JsonIgnoreProperties;
 
+import java.util.List;
+
 @JsonIgnoreProperties(ignoreUnknown = true)
-public record Libro(String titulo,
-                     String autores,
-                    String idiomas) {
-//    @JsonAlias("title")
-//    @JsonAlias("authors")
-//    @JsonAlias("languages")
+public record DatosGenerales(@JsonAlias("results") List <DatosLibros> resultados) {
 
 }
